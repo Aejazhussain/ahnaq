@@ -69,7 +69,7 @@ public class ProductDAOImpl implements ProductDAO {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, p.getName());
             pstmt.setString(2, p.getDescription());
@@ -92,7 +92,7 @@ public class ProductDAOImpl implements ProductDAO {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
 
             pstmt.setString(1, category);
@@ -125,7 +125,7 @@ public class ProductDAOImpl implements ProductDAO {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
@@ -153,7 +153,7 @@ public class ProductDAOImpl implements ProductDAO {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, pid);
             ResultSet rs = pstmt.executeQuery();
@@ -181,7 +181,7 @@ public class ProductDAOImpl implements ProductDAO {
         String query = "delete from products where id =?";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, pid);
             pstmt.executeUpdate();
@@ -196,7 +196,7 @@ public class ProductDAOImpl implements ProductDAO {
         String query = "update products set name=?, description=?,price =?,imagePath =?, qty =?,category = ? where id=?";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, p.getName());
             pstmt.setString(2, p.getDescription());

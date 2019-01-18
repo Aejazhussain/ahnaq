@@ -17,7 +17,7 @@ public class UserAddressDAOImpl implements UserAddressDAO{
       
       try{
           Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, ua.getUserId());
             pstmt.setString(2, ua.getShipTo());
@@ -37,7 +37,7 @@ public class UserAddressDAOImpl implements UserAddressDAO{
         String query= "delete from useraddress where userid =?";
        try{
              Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, id);
             pstmt.executeUpdate();
@@ -54,7 +54,7 @@ public class UserAddressDAOImpl implements UserAddressDAO{
                     String query = "update useraddress set userid=?, shipto=?,billto =? where userid=?";
         try{
              Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1,ua.getUserId());
             pstmt.setString(2, ua.getShipTo());
@@ -75,7 +75,7 @@ public class UserAddressDAOImpl implements UserAddressDAO{
         
          try{
           Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, id);
             ResultSet rs = pstmt.executeQuery();
@@ -102,7 +102,7 @@ public class UserAddressDAOImpl implements UserAddressDAO{
         
          try{
           Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, uid);
             ResultSet rs = pstmt.executeQuery();

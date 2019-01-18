@@ -24,7 +24,7 @@ public class CategoryDAOImpl implements CategoryDAO{
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, c.getName());
             pstmt.setString(2, c.getDescription());
@@ -44,7 +44,7 @@ public class CategoryDAOImpl implements CategoryDAO{
       
       try{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
@@ -67,7 +67,7 @@ public class CategoryDAOImpl implements CategoryDAO{
        
        try{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, cid);
             ResultSet rs = pstmt.executeQuery();
@@ -91,7 +91,7 @@ public class CategoryDAOImpl implements CategoryDAO{
        String query= "delete from categories where id =?";
        try{
              Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, cid);
             pstmt.executeUpdate();
@@ -107,7 +107,7 @@ public class CategoryDAOImpl implements CategoryDAO{
         String query = "update categories set name=?, description=? where id=?";
         try{
              Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1,c.getName());
             pstmt.setString(2, c.getDescription());

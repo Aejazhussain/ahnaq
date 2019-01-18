@@ -14,8 +14,10 @@
     </head>
     <body>
         <c:import url="/header.jsp"></c:import>
-        <div class="container">
-            <h4>Company Info</h4>            
+        <div Style="background-color: 	#E9967A"class="container">
+            <h3>COMPANY INFO-</h3>
+            <h4>MERA  BAZAAR</h4>
+            <p>General Insurance Services, Multi Level Marketing Services & Mobile Phones Trader offered by Mera Bazar Marketing Private Limited from Indore, Madhya prdesh . Mera Bazaar is an e-commerce company based in India. It is a daily deals' website that features discount offers across lifestyle segments such as dining. </p>            
         </div>
         
     </body>

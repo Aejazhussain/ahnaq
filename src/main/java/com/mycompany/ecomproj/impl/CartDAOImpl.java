@@ -17,7 +17,7 @@ public class CartDAOImpl implements CartDAO{
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1,c.getUserId() );
             pstmt.setInt(2, c.getProductId());
@@ -38,7 +38,7 @@ public class CartDAOImpl implements CartDAO{
       
       try{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, userId);
             ResultSet rs = pstmt.executeQuery();
@@ -68,7 +68,7 @@ public class CartDAOImpl implements CartDAO{
         String query= "delete from cart where id =?";
        try{
              Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, cid);
             pstmt.executeUpdate();
@@ -86,7 +86,7 @@ public class CartDAOImpl implements CartDAO{
         String query= "delete from cart where userid =?";
        try{
              Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, uid);
             pstmt.executeUpdate();
@@ -105,7 +105,7 @@ public class CartDAOImpl implements CartDAO{
             String query2 = "update cart set qty=? where productid=?";
             try{
              Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, pid);
             pstmt.setInt(2, uid);
@@ -144,7 +144,7 @@ public class CartDAOImpl implements CartDAO{
             
             System.out.println("updated"+productid+qty);
              Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1,qty);
             pstmt.setInt(2, productid);

@@ -17,7 +17,7 @@ public class UserDAOImpl implements UserDAO {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, u.getUsername());
             pstmt.setString(2, u.getEmail());
@@ -36,7 +36,7 @@ public class UserDAOImpl implements UserDAO {
         String query = "update user set username=?, password=?, email=?, phoneno=? where id=?";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, u.getUsername());
             pstmt.setString(2, u.getPassword());
@@ -56,7 +56,7 @@ public class UserDAOImpl implements UserDAO {
         String query = "delete from user where id =?";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, id);
             pstmt.executeUpdate();
@@ -72,7 +72,7 @@ public class UserDAOImpl implements UserDAO {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, uid);
             ResultSet rs = pstmt.executeQuery();
@@ -104,7 +104,7 @@ public class UserDAOImpl implements UserDAO {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
@@ -132,7 +132,7 @@ public class UserDAOImpl implements UserDAO {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, username);
             pstmt.setString(2, password);
@@ -164,7 +164,7 @@ public class UserDAOImpl implements UserDAO {
         String query = "update user set password=? where email=?";
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecomm", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root1");
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, pass);
             pstmt.setString(2, email);

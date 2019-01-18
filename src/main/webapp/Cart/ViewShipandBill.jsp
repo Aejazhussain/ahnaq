@@ -80,7 +80,7 @@
                 <input type="hidden" class="form-control" name="userid" value="${param.uid}" >
                 <input type="text" class="form-control" name="shipto"  value="${object.getShipTo()}" ><br>
                 <input type="text" class="form-control" name="billto"  value="${object.getBillTo()}"><br>
-                <button class="btn btn-success" type="submit">Update</button><br>
+                <button class="btn btn-success" type="submit" align="Left"  >Update</button><br>
 
             </form>
 
